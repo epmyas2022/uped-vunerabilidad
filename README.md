@@ -7,6 +7,21 @@
 
 Script que permite obtener la información de estudiantes y la sesion de un usuario en el portal de la universidad.
 
+## 🍪 En que consiste la vulnerabilidad
+
+La vunerabilidad consiste en manipular la cookie de una session para obtener la informacion de un usuario sin necesidad de logearse en el portal de la universidad.
+
+la estructura de cookie es la siguiente:
+
+```json
+{
+  ".ASPXAUTH": "puede ser cualquier sesion",
+  "ASP.NET_SessionId": "id de la session del autenticacion",
+  "CodigoUsuario": "codigo del usuario",
+  "usuario": "nombre del usuario",
+}
+```
+
 ## 📋 Requisitos
 
 - Node.js v20.0.0
@@ -19,6 +34,13 @@ git clone https://github.com/epmyas2022/uped-vunerabilidad.git
 
 ```bash
 npm install
+```
+
+Configurar las variables de entorno en el archivo `.env`
+
+```env
+ASPXAUTH=#de cualquier sesion
+SESSION_ID=#id de la session del autenticacion
 ```
 
 ## 💻 Comandos
