@@ -1,3 +1,9 @@
+
+<div align="end">
+<img
+ src="./assets/logo-pedagogica-blanco.png" width="50" height="50" align="center">
+</div>
+
 # Script scrapt vunerability from uped portal
 
 > [!CAUTION]
