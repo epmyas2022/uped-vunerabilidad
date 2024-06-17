@@ -1,6 +1,7 @@
 
 <img
- src="./assets/logo-pedagogica-blanco.png" width="100" height="100" align="center">
+ style="object-fit: cover;"
+ src="./assets/logo-pedagogica-blanco.png" width="600" height="200" align="center">
 
 # Script scrapt vunerability from uped portal
 
