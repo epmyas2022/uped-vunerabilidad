@@ -1,7 +1,9 @@
 
+<div align="end">
 <img
  style="object-fit: cover;"
- src="./assets/logo-pedagogica-blanco.png" width="600" height="200" align="center">
+ src="./assets/icons8-hack-60.png" >
+</div>
 
 # Script scrapt vunerability from uped portal
 
