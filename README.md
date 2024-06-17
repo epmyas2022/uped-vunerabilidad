@@ -14,7 +14,7 @@ Script que permite obtener la información de estudiantes y la sesion de un usua
 ## 🚀 Instalación
 
 ```bash
-git clone
+git clone https://github.com/epmyas2022/uped-vunerabilidad.git
 ```
 
 ```bash
