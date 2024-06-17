@@ -1,6 +1,6 @@
 # Script scrapt vunerability from uped portal
->
-> [!IMPORTANT]  
+
+> [!CAUTION]
 > Este script fue creado con fines educativos,en ningun momento se pretende hacer daño a la universidad o a su portal web al contrario se pretende ayudar a mejorar la seguridad de la misma.
 
 ## 🗒️ Descripcion
