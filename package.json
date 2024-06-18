@@ -2,13 +2,13 @@
   "name": "uped-hack",
   "version": "1.0.0",
   "description": "",
-  "main": "scrapt.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "general": "node --env-file=.env scrapt.js general",
-    "login": "node --env-file=.env scrapt.js session",
-    "pagos": "node --env-file=.env scrapt.js pagos"
+    "general": "node --env-file=.env index.js general",
+    "login": "node --env-file=.env index.js session",
+    "pagos": "node --env-file=.env index.js pagos"
   },
   "keywords": [],
   "author": "",

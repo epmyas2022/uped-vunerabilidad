@@ -5,7 +5,7 @@
  src="./assets/icons8-hack-60.png" >
 </div>
 
-# Script scrapt vunerability from uped portal
+# Script scraping vunerability from uped portal
 
 > [!CAUTION]
 > Este script fue creado con fines educativos,en ningun momento se pretende hacer daño a la universidad o a su portal web al contrario se pretende ayudar a mejorar la seguridad de la misma.
