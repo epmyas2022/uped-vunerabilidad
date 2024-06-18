@@ -48,6 +48,7 @@ Configurar las variables de entorno en el archivo `.env`
 ```env
 ASPXAUTH=#de cualquier sesion
 SESSION_ID=#id de la session del autenticacion
+ARGS=#argumentos para el navegador
 ```
 
 ## 💻 Comandos
@@ -55,7 +56,7 @@ SESSION_ID=#id de la session del autenticacion
 Obtener la informacion del expediente de los estudiantes basados en un rango  x1 a x2
 
 ```bash
-npm run general <x1> <x2>
+npm run general <x1> <x2> [optional] <headless>
 ```
 
 Obtener la sesion de un usuario
@@ -73,6 +74,7 @@ npm run pagos <user> <codigo>
 ## 📂 Estructura de archivos
 
 Dentro de la carpeta data se encuentra varios datos con que se comprobo la vulnerabilidad del portal de la universidad. estos datos obtenidos fueron mediante el script aprovechando la vulnerabilidad.
+en total existen aproximadamente **20,135** registros de estudiantes.
 
 ## Sitios vulnerables
 
