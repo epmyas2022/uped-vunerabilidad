@@ -72,7 +72,7 @@ npm run pagos <user> <codigo>
 
 ## 📂 Estructura de archivos
 
-Dentro de la carpeta data se encuentra varios datos con que si comprobaron la vulnerabilidad del portal de la universidad. esto datos son del scrapeo que se realizo con el script.
+Dentro de la carpeta data se encuentra varios datos con que se comprobo la vulnerabilidad del portal de la universidad. estos datos obtenidos fueron mediante el script aprovechando la vulnerabilidad.
 
 ## Sitios vulnerables
 
