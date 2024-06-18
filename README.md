@@ -76,7 +76,7 @@ Dentro de la carpeta data se encuentra varios datos con que si comprobaron la vu
 
 ## Sitios vulnerables
 
-- [x] Portal de la universidad [aqui](https://myappcloud.net/uped/portal_estudiante)
+- [x] Portal de la universidad [aqui](https://myappcloud.net/uped/login.aspx)
 - [x] Portal de pagos [aqui](https://saas.spsoftware.net/uped_pagos/)
 - [ ] Portal de docentes
 - [ ] Portal de evaluacion docente
