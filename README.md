@@ -56,7 +56,7 @@ ARGS=#argumentos para el navegador
 Obtener la informacion del expediente de los estudiantes basados en un rango  x1 a x2
 
 ```bash
-npm run general <x1> <x2> [optional] <headless>
+npm run general <x1> <x2> [optional | Boolean] <headless>
 ```
 
 Obtener la sesion de un usuario
