@@ -55,33 +55,24 @@ const elementsExpendiente = {
   },
 };
 
-const resquestInfo = async (
+const resquestInfo = async ({
   dicElements,
   url,
   codigo,
   user,
   close = true,
   viewport = null,
-  domain = "myappcloud.net"
-) => {
+  domain,
+  headless,
+}) => {
   console.log("scrapt.js running");
-
+  const args = process.env.ARGS.split(",");
+  const browser = await puppeteer.launch({
+    headless,
+    ignoreHTTPSErrors: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox", ...args],
+  });
   try {
-    const browser = await puppeteer.launch({
-      headless: false,
-      ignoreHTTPSErrors: true,
-      args: [
-        "--no-sandbox",
-        "--disable-setuid-sandbox",
-        "--disable-dev-shm-usage",
-        "--disable-accelerated-2d-canvas",
-        "--no-first-run",
-        "--no-zygote",
-        // "--single-process",
-        "--disable-gpu", // <-- add this one
-      ],
-    });
-
     const [page] = await browser.pages();
     const cookies = [
       {
@@ -94,8 +85,8 @@ const resquestInfo = async (
         value: process.env.SESSION_ID,
         domain,
       },
-      { name: "CodigoUsuario", value: codigo, domain},
-      { name: "usuario", value: user, domain},
+      { name: "CodigoUsuario", value: codigo, domain },
+      { name: "usuario", value: user, domain },
     ];
 
     if (viewport) await page.setViewport(viewport);
@@ -151,18 +142,20 @@ const resquestInfo = async (
   }
 };
 
-const infoGeneral = async (min = 1, max) => {
+const infoGeneral = async (min = 1, max, headless = true) => {
   const allData = [];
   const date = new Date();
   const time = date.getTime();
   for (let i = min; i < max; i++) {
     console.log(`Haciendo scrapt al codigo ${i}`);
-    const data = await resquestInfo(
-      elementsExpendiente,
-      "https://myappcloud.net/uped/portal_estudiante/expediente_new.aspx",
-      String(i),
-      "djdjkdjd"
-    );
+    const data = await resquestInfo({
+      dicElements: elementsExpendiente,
+      url: "https://myappcloud.net/uped/portal_estudiante/expediente_new.aspx",
+      codigo: String(i),
+      user: "UPED-ESTUDIANTE",
+      domain: "myappcloud.net",
+      headless: headless,
+    });
 
     if (i % 100 === 0) {
       fs.writeFile(
@@ -180,40 +173,43 @@ const infoGeneral = async (min = 1, max) => {
     data["codigo"] = i;
     allData.push(data);
   }
-
-  //save all data
-
-  /*  fs.writeFile("data/data.json", JSON.stringify(allData), function (err) {
-    if (err) {
-      console.log(err);
-    }
-  }); */
 };
 
 //  "https://myappcloud.net/uped/portal_estudiante/externa.aspx"
 
 const openSession = async (user, codigo, url, domain) => {
-  await resquestInfo([], url, codigo, user, false, {
-    width: 1000,
-    height: 600,
-  }, domain);
+  await resquestInfo({
+    dicElements: [],
+    close: false,
+    viewport: {
+      width: 1000,
+      height: 600,
+    },
+    headless: false,
+    domain,
+    url,
+    codigo,
+    user,
+  });
 };
 
 const commands = {
-  general: () => infoGeneral(process.argv[3], process.argv[4]),
-  session: () =>  openSession(
-    process.argv[3],
-    process.argv[4],
-    "https://myappcloud.net/uped/portal_estudiante/externa.aspx",
-    "myappcloud.net"
-  ),
-  pagos: () => openSession(
-    process.argv[3],
-    process.argv[4],
-    "https://saas.spsoftware.net/uped_pagos/pagos_linea_alu.aspx",
-    "saas.spsoftware.net"
-  ),
+  general: () =>
+    infoGeneral(process.argv[3], process.argv[4], process.argv[5] === "true"),
+  session: () =>
+    openSession(
+      process.argv[3],
+      process.argv[4],
+      "https://myappcloud.net/uped/portal_estudiante/externa.aspx",
+      "myappcloud.net"
+    ),
+  pagos: () =>
+    openSession(
+      process.argv[3],
+      process.argv[4],
+      "https://saas.spsoftware.net/uped_pagos/pagos_linea_alu.aspx",
+      "saas.spsoftware.net"
+    ),
 };
-/* infoGeneral(54600, 59000); */
 
 commands[process.argv[2]]();
