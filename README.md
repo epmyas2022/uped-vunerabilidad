@@ -73,7 +73,7 @@ npm run pagos <user> <codigo>
 
 ## 🐳 Con docker
 
-Esto es util para ejecutar el script en un contenedor docker, podriamos ejectar x cantidad de contenedores para obtener la informacion de los estudiantes.
+Esto es util para ejecutar el script en un contenedor docker, podriamos ejecutar x cantidad de contenedores para obtener la informacion de los estudiantes.
 
 Construir la imagen (builder)
 
