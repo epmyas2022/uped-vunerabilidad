@@ -84,7 +84,7 @@ docker build -f .docker/Dockerfile --target builder -t uped-vunerabilidad .
 Construir el contenedor
 
 ```bash
-docker run  -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta --privileged --security-opt seccomp=.docker/chrome.json -d uped-vunerabilidad
+docker run -it -d -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta --privileged --security-opt seccomp=.docker/chrome.json uped-vunerabilidad
 ```
 
 ## 📂 Estructura de archivos
