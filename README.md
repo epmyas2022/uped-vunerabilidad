@@ -90,7 +90,7 @@ docker run  -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta --privi
 ## 📂 Estructura de archivos
 
 Dentro de la carpeta data se encuentra varios datos con que se comprobo la vulnerabilidad del portal de la universidad. estos datos obtenidos fueron mediante el script aprovechando la vulnerabilidad.
-en total existen aproximadamente **20,135** registros de estudiantes.
+en total existen aproximadamente **20,927** registros de estudiantes.
 
 ## Sitios vulnerables
 
