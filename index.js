@@ -66,7 +66,7 @@ const resquestInfo = async ({
   headless,
 }) => {
   console.log("scrapt.js running");
-  const args = process.env.ARGS.split(",");
+  const args = process.env.ARGS ? process.env.ARGS.split(",") : [];
   const browser = await puppeteer.launch({
     headless,
     ignoreHTTPSErrors: true,
@@ -196,6 +196,11 @@ const openSession = async (user, codigo, url, domain) => {
 const commands = {
   general: () =>
     infoGeneral(process.argv[3], process.argv[4], process.argv[5] === "true"),
+  docker: async () => {
+    await infoGeneral(process.env.FROM, process.env.TO, true);
+    console.log("Docker finished");
+    process.stdin.resume();
+  },
   session: () =>
     openSession(
       process.argv[3],
