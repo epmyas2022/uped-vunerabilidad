@@ -71,6 +71,22 @@ Obtener la sesion del portal de pagos de un estudiante
 npm run pagos <user> <codigo>
 ```
 
+## 🐳 Con docker
+
+Esto es util para ejecutar el script en un contenedor docker, podriamos ejectar x cantidad de contenedores para obtener la informacion de los estudiantes.
+
+Construir la imagen (builder)
+
+```bash
+docker build -f .docker/Dockerfile --target builder -t uped-vunerabilidad .
+```
+
+Construir el contenedor
+
+```bash
+docker run  -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta --privileged --security-opt seccomp=.docker/chrome.json -d uped-vunerabilidad
+```
+
 ## 📂 Estructura de archivos
 
 Dentro de la carpeta data se encuentra varios datos con que se comprobo la vulnerabilidad del portal de la universidad. estos datos obtenidos fueron mediante el script aprovechando la vulnerabilidad.
