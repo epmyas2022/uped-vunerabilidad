@@ -133,7 +133,7 @@ torify curl -X GET "https://myappcloud.net/uped/portal_catedratico/externa.aspx"
 ## Descargar datos
 
 - Tabla de *ra_per_personas* (informacion de estudiantes) [aqui](https://u.pcloud.link/publink/show?code=XZvRx55ZgUc7an7IIyfF27CLa93Wo7KCf6Yy)
--
+
 - Tabla de *ra_per_foto_carne* (foto de carne de estudiantes) [aqui](https://u.pcloud.link/publink/show?code=XZ9sx55ZEXFqi3MoUjzyXUdw1isK1jm1Wu0y)
 
 ## Sitios vulnerables
