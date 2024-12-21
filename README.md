@@ -140,4 +140,4 @@ torify curl -X GET "https://myappcloud.net/uped/portal_catedratico/externa.aspx"
 
 - [x] Portal de la universidad [aqui](https://myappcloud.net/uped/login.aspx)
 - [x] Portal de pagos [aqui](https://saas.spsoftware.net/uped_pagos/)
-- [x] Portal de docentes [aqui](https://myappcloud.net/uped/portal_catedratico/externa.aspx)
+- [x] Base de datos uonline_uped [aqui](https://myappcloud.net/uped/portal_catedratico/externa.aspx)
