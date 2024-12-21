@@ -92,7 +92,7 @@ docker run -it -d -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta -
 Dentro de la carpeta data se encuentra varios datos con que se comprobo la vulnerabilidad del portal de la universidad. estos datos obtenidos fueron mediante el script aprovechando la vulnerabilidad.
 en total existen aproximadamente **20,485** registros de estudiantes.
 
-## 💉 Vunerabilidad en inyeccion de SQL
+## 💉 Vunerabilidad de inyeccion de SQL
 
 Se descubrio otra vunerabilidad que permite inyectar codigo SQL en una cookie y mediante esto se logro obtener acceso a la base de datos de la universidad. La url a la que se le inyecto el codigo SQL fue la siguiente:
 
