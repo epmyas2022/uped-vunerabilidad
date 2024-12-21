@@ -92,7 +92,7 @@ docker run -it -d -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta -
 Dentro de la carpeta data se encuentra varios datos con que se comprobo la vulnerabilidad del portal de la universidad. estos datos obtenidos fueron mediante el script aprovechando la vulnerabilidad.
 en total existen aproximadamente **20,485** registros de estudiantes.
 
-## Vunerabilidad en inyeccion de SQL
+## 💉 Vunerabilidad en inyeccion de SQL
 
 Se descubrio otra vunerabilidad que permite inyectar codigo SQL en una cookie y mediante esto se logro obtener acceso a la base de datos de la universidad. La url a la que se le inyecto el codigo SQL fue la siguiente:
 
@@ -130,13 +130,13 @@ torify curl -X GET "https://myappcloud.net/uped/portal_catedratico/externa.aspx"
   --cookie "Usuario=<injection_sql>" 
 ```
 
-## Descargar datos
+## 💻 Descargar datos
 
 - Tabla de *ra_per_personas* (informacion de estudiantes) [aqui](https://u.pcloud.link/publink/show?code=XZvRx55ZgUc7an7IIyfF27CLa93Wo7KCf6Yy)
 
 - Tabla de *ra_per_foto_carne* (foto de carne de estudiantes) [aqui](https://u.pcloud.link/publink/show?code=XZ9sx55ZEXFqi3MoUjzyXUdw1isK1jm1Wu0y)
 
-## Sitios vulnerables
+## 🔗 Sitios vulnerables
 
 - [x] Portal de la universidad [aqui](https://myappcloud.net/uped/login.aspx)
 - [x] Portal de pagos [aqui](https://saas.spsoftware.net/uped_pagos/)
