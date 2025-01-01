@@ -87,6 +87,14 @@ Construir el contenedor
 docker run -it -d -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta --privileged --security-opt seccomp=.docker/chrome.json uped-vunerabilidad
 ```
 
+## 🪪 Levantar  servicio de Adminer
+
+```bash
+docker-compose up -d
+```
+
+Para acceder al gestor de base de datos: [http://localhost:8080](http://localhost:8080)
+
 ## 📂 Estructura de archivos
 
 Dentro de la carpeta data se encuentra varios datos con que se comprobo la vulnerabilidad del portal de la universidad. estos datos obtenidos fueron mediante el script aprovechando la vulnerabilidad.
