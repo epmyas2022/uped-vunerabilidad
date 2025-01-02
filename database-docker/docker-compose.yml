@@ -1,0 +1,30 @@
+name: "Gestor y control de bases de datos uped"
+services:
+  dbeaver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dbeaver
+    container_name: dbeaver
+    restart: always
+    environment:
+      - DISPLAY=novnc:0.0
+    depends_on:
+      - novnc
+    networks:
+      - x11
+  novnc:
+    image: theasp/novnc:latest
+    container_name: novnc
+    environment:
+      - DISPLAY_WIDTH=1024
+      - DISPLAY_HEIGHT=768
+      - RUN_XTERM=no
+      - RUN_FLUXBOX=yes
+    ports:
+      - "8080:8080"
+    networks:
+      - x11
+networks:
+  x11:
+    driver: bridge

@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"dbeaver-sample-database-sqlite-1": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "DBeaver Sample Database (SQLite)",
+			"save-password": true,
+			"show-system-objects": true,
+			"configuration": {
+				"database": "/root/.local/share/DBeaverData/workspace6/.metadata/sample-database-sqlite-1/Chinook.db",
+				"url": "jdbc:sqlite:/root/.local/share/DBeaverData/workspace6/.metadata/sample-database-sqlite-1/Chinook.db",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
