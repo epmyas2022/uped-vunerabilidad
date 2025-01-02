@@ -87,13 +87,24 @@ Construir el contenedor
 docker run -it -d -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta --privileged --security-opt seccomp=.docker/chrome.json uped-vunerabilidad
 ```
 
-## 🪪 Levantar  servicio de Adminer
+## 🐳 Acceder a la base de datos
+
+Podemos acceder a la base de datos a través de un contenedor de docker usando novnc y dbeaver.
+
+Acceder a la carpeta `database-docker`:
+
+```bash
+cd database-docker
+```
+
+Ejecutar el contenedor:
 
 ```bash
 docker-compose up -d
 ```
 
-Para acceder al gestor de base de datos: [http://localhost:8080](http://localhost:8080)
+Si todo salio bien, podemos acceder a la base de datos a través de un navegador web.
+[http://localhost:8080/vnc.html](http://localhost:8080/vnc.html)
 
 ## 📂 Estructura de archivos
 
