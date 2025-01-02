@@ -87,25 +87,6 @@ Construir el contenedor
 docker run -it -d -e ASPXAUTH=token -e SESSION_ID=id -e FROM=desde -e TO=hasta --privileged --security-opt seccomp=.docker/chrome.json uped-vunerabilidad
 ```
 
-## 🐳 Acceder a la base de datos
-
-Podemos acceder a la base de datos a través de un contenedor de docker usando novnc y dbeaver.
-
-Acceder a la carpeta `database-docker`:
-
-```bash
-cd database-docker
-```
-
-Ejecutar el contenedor:
-
-```bash
-docker-compose up -d
-```
-
-Si todo salio bien, podemos acceder a la base de datos a través de un navegador web.
-[http://localhost:8080/vnc.html](http://localhost:8080/vnc.html)
-
 ## 📂 Estructura de archivos
 
 Dentro de la carpeta data se encuentra varios datos con que se comprobo la vulnerabilidad del portal de la universidad. estos datos obtenidos fueron mediante el script aprovechando la vulnerabilidad.
@@ -148,6 +129,25 @@ torify curl -X GET "https://myappcloud.net/uped/portal_catedratico/externa.aspx"
   --cookie "CodigoUsuario=1789" \
   --cookie "Usuario=<injection_sql>" 
 ```
+
+## 🐳 Acceder a la base de datos
+
+Podemos acceder a la base de datos a través de un contenedor de docker usando novnc y dbeaver.
+
+Acceder a la carpeta `database-docker`:
+
+```bash
+cd database-docker
+```
+
+Ejecutar el contenedor:
+
+```bash
+docker-compose up -d
+```
+
+Si todo salio bien, podemos acceder a la base de datos a través de un navegador web.
+[http://localhost:8080/vnc.html](http://localhost:8080/vnc.html)
 
 ## 💻 Descargar datos
 
