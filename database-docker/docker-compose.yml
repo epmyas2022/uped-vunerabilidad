@@ -1,4 +1,4 @@
-name: "Gestor y control de bases de datos uped"
+name: "uped"
 services:
   dbeaver:
     build:
