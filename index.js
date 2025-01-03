@@ -101,8 +101,7 @@ const resquestInfo = async ({
 
     const data = {};
 
-    for (let i = 0; i < keysTags.length; i++) {
-      const key = keysTags[i];
+    for (const key of keysTags) {
       const value = dicElements[key]["name"];
       const element = await page.$(key);
 
@@ -142,7 +141,7 @@ const resquestInfo = async ({
   }
 };
 
-const infoGeneral = async (min = 1, max, headless = true) => {
+const infoGeneral = async (min = 1, max = Infinity, headless = true) => {
   const allData = [];
   const date = new Date();
   const time = date.getTime();
